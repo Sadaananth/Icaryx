@@ -1,6 +1,12 @@
+
 #include <iostream>
 
-int main() {
-    std::cout << "Hi!" << std::endl;
-    return 0;
+#include "app.h"
+
+int
+main()
+{
+  App app;
+  app.build();
+  return 0;
 }
