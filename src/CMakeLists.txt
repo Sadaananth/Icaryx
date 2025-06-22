@@ -1,19 +1,19 @@
-add_library (app-lib
+add_library (icaryx-lib
 	app.cpp
 	app.h
   )
 
 
-target_link_libraries(app-lib
+target_link_libraries(icaryx-lib
 	#${Boost_LIBRARIES}
   )
 
-add_executable (app
+add_executable (icaryx
   main.cpp
   )
 
-target_link_libraries(app
-  app-lib
+target_link_libraries(icaryx
+  icaryx-lib
   )
 
-install (TARGETS app DESTINATION bin)
+install (TARGETS icaryx DESTINATION bin)
