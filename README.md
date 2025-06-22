@@ -10,14 +10,15 @@ We can build Icaryx using [Bazel](https://bazel.build), a fast and reliable buil
 #### ✅ Prerequisites
 
 - Install Bazel by following the official instructions:  
-  👉 https://bazel.build/install
+  https://bazel.build/install
 
 #### 🔧 Build the Project
 
 To build the project using bazel, run the following command
 
 ```bash
-    bash build //src:icaryx
+bash build //src:icaryx
+```
 
 
 The output binary will be located at `bazel-bin/main/icaryx`
@@ -26,6 +27,7 @@ The output binary will be located at `bazel-bin/main/icaryx`
 
 ```bash
     bazel run //src:icaryx
+```
 
 #### 📚 Learn More
 
