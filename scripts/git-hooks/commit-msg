@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "❌ No commit message file passed to hook."
+    exit 1
+fi
+
+COMMIT_MSG_FILE="$1"
+COMMIT_MSG=$(head -n1 "$COMMIT_MSG_FILE")
+
+# Following the semver commit message convention
+TYPES="feat|fix|chore|docs|style|refactor|test|perf"
+REGEX="^(${TYPES}): .+ \(#([0-9]+)\)$"
+
+if ! echo "$COMMIT_MSG" | grep -Eq "$REGEX"; then
+    echo "❌ Invalid commit message:"
+    echo "   \"$COMMIT_MSG\""
+    echo
+    echo "✅ Expected format:"
+    echo "   <type>: message (#123)"
+    echo "   Allowed types: ${TYPES}"
+    echo
+    echo "Examples:"
+    echo "   feat: add login feature (#231)"
+    echo "   fix: handle null pointer case (#432)"
+    exit 1
+fi
