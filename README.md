@@ -19,8 +19,6 @@ To build the project using bazel, run the following command
 ```bash
 bash build //src:icaryx
 ```
-
-
 The output binary will be located at `bazel-bin/main/icaryx`
 
 #### ▶️ Run the Binary
@@ -28,6 +26,21 @@ The output binary will be located at `bazel-bin/main/icaryx`
 ```bash
     bazel run //src:icaryx
 ```
+
+You can build this project with cmake also
+
+### 🚀 Building with Cmake
+```bash
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE ..
+make -j$(nproc)
+```
+
+#### ▶️ Run the Binary
+```bash
+./src/icaryx
+```
+
 
 #### 📚 Learn More
 
