@@ -36,4 +36,4 @@ build*
 
 # Bazel build files
 bazel-*
-MODULE*
+MODULE.bazel.lock

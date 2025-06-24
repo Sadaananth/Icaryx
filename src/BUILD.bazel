@@ -1,4 +1,11 @@
+cc_library(
+    name = "icaryx-lib",
+    srcs = ["app.cpp"],
+    hdrs = ["app.h"],
+)
+
 cc_binary(
     name = "icaryx",
     srcs = ["main.cpp"],
+    deps = [":icaryx-lib", "@boost.asio"],
 )
