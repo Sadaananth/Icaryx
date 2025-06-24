@@ -43,7 +43,7 @@ You can build this project with cmake also
 ### 🚀 Building with Cmake
 ```bash
 mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE ..
+cmake -DCMAKE_BUILD_TYPE=Debug ..
 make -j$(nproc)
 ```
 
