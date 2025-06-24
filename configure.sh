@@ -3,8 +3,9 @@ set -e
 
 usage() {
     echo "Usage: $0 --[cmake|bazel]"
-    echo "  --cmake  - install cmake and set up build directory"
-    echo "  --bazel  - install bazel only"
+    echo "  --cmake   - install cmake and set up build directory"
+    echo "  --bazel   - install bazel only"
+    echo "  --format  - Configure clang-format and git commit hook"
     exit 1
 }
 
@@ -41,6 +42,12 @@ install_bazel() {
     echo "Setting up bazel workspace..."
 }
 
+configure_format() {
+    echo "Configuring clang-format..."
+    cp scripts/git-hooks/commit-msg .git/hooks/commit-msg
+    chmod +x .git/hooks/commit-msg
+}
+
 case "$1" in
     --cmake)
         install_cmake
@@ -52,3 +59,7 @@ case "$1" in
         usage
         ;;
 esac
+
+configure_format
+echo "Configuration complete."
+echo "You can now build the project using 'cmake' or 'bazel' as per your choice."

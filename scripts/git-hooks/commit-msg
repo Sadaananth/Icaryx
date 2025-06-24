@@ -8,7 +8,7 @@ fi
 COMMIT_MSG_FILE="$1"
 COMMIT_MSG=$(head -n1 "$COMMIT_MSG_FILE")
 
-# Following the semver commit message convention
+# following the semver convention
 TYPES="feat|fix|chore|docs|style|refactor|test|perf"
 REGEX="^(${TYPES}): .+ \(#([0-9]+)\)$"
 
