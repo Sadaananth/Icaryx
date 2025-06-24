@@ -1,16 +1,27 @@
 # Icaryx
 Tracing tool based on ebpf
 
+## Configure setup
+
+Run the configure script with necessary command to configure the project.
+
+eg: to configure bazel
+
+```bash
+./configure.sh --bazel
+```
+
+to configure cmake
+
+```bash
+./configure.sh --cmake
+```
+
 ## Build setup
 
 ### 🚀 Building with Bazel
 
 We can build Icaryx using [Bazel](https://bazel.build), a fast and reliable build system developed by google.
-
-#### ✅ Prerequisites
-
-- Install Bazel by following the official instructions:  
-  https://bazel.build/install
 
 #### 🔧 Build the Project
 
@@ -40,7 +51,6 @@ make -j$(nproc)
 ```bash
 ./src/icaryx
 ```
-
 
 #### 📚 Learn More
 
