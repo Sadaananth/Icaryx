@@ -1,11 +1,11 @@
 add_library (icaryx-lib
-	app.cpp
+	app.cxx
 	app.h
   )
 
 
 target_link_libraries(icaryx-lib
-	#${Boost_LIBRARIES}
+	${Boost_LIBRARIES}
   )
 
 add_executable (icaryx
