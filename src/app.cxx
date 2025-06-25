@@ -1,7 +1,7 @@
 /* (C) Copyright 2007 Free Software Foundation GPL3.
  *   The GNU General Public License is a free, copyleft license for
  * software and other kinds of works.
- * 
+ *
  *   The licenses for most software and other practical works are designed
  * to take away your freedom to share and change the works.  By contrast,
  * the GNU General Public License is intended to guarantee your freedom to
@@ -14,29 +14,26 @@
  * Contributors:
  *     Kashyap Ekbote (kashyap.ekbote@gmail.com). */
 
-
-#ifndef ICARYX__b6f3743f_9627_4349_a109_9a16a7a61cb6
-#define ICARYX__b6f3743f_9627_4349_a109_9a16a7a61cb6
-
-#include <boost/asio/io_service.hpp>
+#include <iostream>
 
 #include "namespace.h"
+#include "app.h"
 
 NAMESPACE__ICARYX_START
 
-class App
+void
+App::build()
 {
-public:
-  App() {}
-  void build();
-  void run();
-private:
-  boost::asio::io_service m_io_service;
-};
+  std::cout << "Hi!" << std::endl;
+}
+
+void
+App::run()
+{
+  m_io_service.run();
+}
 
 NAMESPACE__ICARYX_END
-
-#endif // ICARYX__b6f3743f_9627_4349_a109_9a16a7a61cb6
 
 /*
   Local Variables:
