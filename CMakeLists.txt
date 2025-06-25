@@ -20,9 +20,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 
 # Enable it when we require any libs
-#set (Boost_USE_STATIC_LIBS ON)
-#find_package (Boost REQUIRED COMPONENTS
-#   thread date_time system program_options)
+set (Boost_USE_STATIC_LIBS ON)
+find_package (Boost REQUIRED COMPONENTS
+   thread date_time system program_options)
 
 find_package(Threads)
 
