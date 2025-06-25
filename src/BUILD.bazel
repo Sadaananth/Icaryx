@@ -1,6 +1,6 @@
 cc_library(
     name = "icaryx-lib",
-    srcs = ["app.cpp"],
+    srcs = ["app.cxx"],
     hdrs = ["app.h"],
 )
 
