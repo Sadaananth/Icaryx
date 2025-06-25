@@ -33,6 +33,7 @@
 
 #build folders
 build*
+.cache
 
 # Bazel build files
 bazel-*
