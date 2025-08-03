@@ -8,5 +8,5 @@ cc_library(
 cc_binary(
     name = "icaryx",
     srcs = ["main.cpp"],
-    deps = [":icaryx-lib", "@boost.asio"],
+    deps = [":icaryx-lib", "@boost.asio", "@boost.program_options"],
 )
