@@ -2,6 +2,7 @@ cc_library(
     name = "icaryx-lib",
     srcs = ["app.cpp"],
     hdrs = ["app.h"],
+    visibility = ["//visibility:public"],
 )
 
 cc_binary(
